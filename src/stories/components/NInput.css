@@ -1,0 +1,63 @@
+.n-input {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.n-input > * {
+  display: block;
+}
+.n-input__input {
+  border: 0;
+  border-radius: 3px;
+  box-shadow: #aaa 0px 0px 0px 1px inset;
+  transition: box-shadow 0.3s;
+  outline: none;
+  display: inline-block;
+  line-height: 1;
+  padding: 5px;
+}
+.n-input__input:hover {
+  box-shadow: #555 0px 0px 0px 1px inset;
+}
+.n-input__input:placeholder-shown + .n-input__label {
+  translate: 0 -90%;
+}
+.n-input__input:focus + .n-input__label {
+  translate: 0 -150%;
+}
+/* .n-input:focus {
+  box-shadow: #000 0px 0px 0px 1px inset;
+} */
+.n-input__input:focus {
+  box-shadow: #ffa1e3 0px 0px 0px 2px inset;
+}
+
+.n-input__label {
+  position: absolute;
+  padding: 5px;
+  pointer-events: none;
+  translate: 0 150%;
+  transition: translate 0.3s;
+}
+.n-input__small {
+
+}
+/* .n-input--primary {
+  color: white;
+  background-color: #1ea7fd;
+}
+.n-input--secondary {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+.n-input--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.n-input--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.n-input--large {
+  font-size: 16px;
+  padding: 12px 24px;
+} */
