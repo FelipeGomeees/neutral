@@ -4,6 +4,7 @@
 .n-input > * {
   display: block;
 }
+
 .n-input__input {
   border: 0;
   border-radius: 3px;
@@ -12,33 +13,30 @@
   outline: none;
   display: inline-block;
   line-height: 1;
-  padding: 5px;
+  padding: 8px;
+  caret-color: #ffa1e3;
 }
 .n-input__input:hover {
   box-shadow: #555 0px 0px 0px 1px inset;
 }
-.n-input__input:placeholder-shown + .n-input__label {
-  translate: 0 -90%;
+.n-input__input:not(:placeholder-shown) + .n-input__label,
+.n-input__input:focus + .n-input__label  {
+  translate: 0 -160%;
 }
-.n-input__input:focus + .n-input__label {
-  translate: 0 -150%;
-}
-/* .n-input:focus {
-  box-shadow: #000 0px 0px 0px 1px inset;
-} */
 .n-input__input:focus {
-  box-shadow: #ffa1e3 0px 0px 0px 2px inset;
+  box-shadow: #ffa1e3;
 }
 
 .n-input__label {
   position: absolute;
-  padding: 5px;
+  padding: 8px;
   pointer-events: none;
-  translate: 0 150%;
-  transition: translate 0.3s;
+  translate: 0 -90%;
+  transition: translate 0.2s ease-out;
+  color: #222;
 }
 .n-input__small {
-
+  font-size: 0.75rem;
 }
 /* .n-input--primary {
   color: white;
