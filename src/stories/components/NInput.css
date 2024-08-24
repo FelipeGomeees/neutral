@@ -16,10 +16,27 @@
   caret-color: var(--n-theme-primary);
   color: var(--n-dark-2);
 }
+.n-input__input {
+  font-size: 1rem;
+}
+.n-input__input--s-small {
+  font-size: 0.8rem;
+}
+.n-input__input--s-large {
+  font-size: 1.12rem;
+}
 .n-input__input:not(:placeholder-shown) + .n-input__label,
 .n-input__input:focus + .n-input__label  {
-  translate: 0 -160%;
+  translate: 0 -125%;
   font-size: 0.9rem;
+}
+.n-input__input--s-small:not(:placeholder-shown) + .n-input__label,
+.n-input__input--s-small:focus + .n-input__label  {
+  font-size: 0.72rem;
+}
+.n-input__input--s-large:not(:placeholder-shown) + .n-input__label,
+.n-input__input--s-large:focus + .n-input__label  {
+  font-size: 1rem;
 }
 .n-input__input--default {
   box-shadow: var(--n-light-2) 0px 0px 0px 1px inset;
@@ -46,9 +63,9 @@
 
 .n-input__label {
   position: absolute;
+  top: 1rem;
+  left: 1rem;
   pointer-events: none;
-  padding: 8px;
-  translate: 0 -90%;
   transition: translate var(--n-transition-time) ease-out, font-size var(--n-transition-time) ease-out;
   color: var(--n-dark-2);
 }
