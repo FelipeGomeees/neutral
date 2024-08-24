@@ -6,8 +6,8 @@
         placeholder=""
         :class="classes"
         />
-        <label class="n-input__label">Teste</label>
-        <small class="n-input__small">Hello Small</small>
+        <label class="n-input__label">{{ label }}</label>
+        <small class="n-input__small">{{ small }}</small>
     </div>
 </template>
   
@@ -25,7 +25,9 @@
     props: {
       label: {
         type: String,
-        required: true,
+      },
+      small: {
+        type: String,
       },
       primary: {
         type: Boolean,
