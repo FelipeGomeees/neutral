@@ -63,8 +63,6 @@
 
 .n-input__label {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
   pointer-events: none;
   transition: translate var(--n-transition-time) ease-out, font-size var(--n-transition-time) ease-out;
   color: var(--n-dark-2);
