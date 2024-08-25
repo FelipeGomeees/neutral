@@ -1,5 +1,7 @@
 @import url("/src/style/theme.css"); 
 
+
+/* Base Styles */
 .n-input {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -8,56 +10,79 @@
 }
 
 .n-input__input {
-  border: 0;
-  border-radius: 3px;
-  box-shadow: #aaa 0px 0px 0px 1px inset;
-  transition: box-shadow 0.3s;
   outline: none;
   display: inline-block;
+  border: 0;
   line-height: 1;
-  padding: 8px;
+  font-size: 1rem;
+  transition: box-shadow var(--n-transition-time);
   caret-color: var(--n-theme-primary);
-}
-.n-input__input:hover {
-  box-shadow: #555 0px 0px 0px 1px inset;
-}
-.n-input__input:not(:placeholder-shown) + .n-input__label,
-.n-input__input:focus + .n-input__label  {
-  translate: 0 -160%;
-}
-.n-input__input:focus {
-  box-shadow: var(--n-theme-primary) 0px 0px 0px 2px inset;
+  color: var(--n-dark-2);
 }
 
 .n-input__label {
   position: absolute;
-  padding: 8px;
   pointer-events: none;
-  translate: 0 -90%;
-  transition: translate 0.2s ease-out;
-  color: #222;
+  top: var( --n-font);
+  font-size: var( --n-font);
+  transition: translate var(--n-transition-time) ease-out, font-size var(--n-transition-time) ease-out;
+  color: var(--n-dark-2);
 }
-.n-input__small {
+
+.n-input__size-small {
   font-size: 0.75rem;
 }
-/* .n-input--primary {
-  color: white;
-  background-color: #1ea7fd;
+
+.n-input__input:not(:placeholder-shown) + .n-input__label,
+.n-input__input:focus + .n-input__label  {
+  translate: 0 -125%;
+  font-size: calc(var( --n-font) * 0.9);
 }
-.n-input--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+
+/* Optional Styles */
+.n-input--size-small > .n-input__input,
+.n-input--size-small > .n-input__label {
+  font-size: var( --n-font-small);
 }
-.n-input--small {
-  font-size: 12px;
-  padding: 10px 16px;
+.n-input--size-large > .n-input__input,
+.n-input--size-large > .n-input__label
+ {
+  font-size: var( --n-font-large);
 }
-.n-input--medium {
-  font-size: 14px;
-  padding: 11px 20px;
+
+.n-input--size-small > .n-input__input:not(:placeholder-shown) + .n-input__label,
+.n-input--size-small > .n-input__input:focus + .n-input__label  {
+  font-size: calc(var( --n-font-small) * 0.9);
 }
-.n-input--large {
-  font-size: 16px;
-  padding: 12px 24px;
-} */
+.n-input--size-large > .n-input__input:not(:placeholder-shown) + .n-input__label,
+.n-input--size-large > .n-input__input:focus + .n-input__label  {
+  font-size: calc(var( --n-font-large) * 0.9);
+}
+.n-input--default > .n-input__input {
+  box-shadow: var(--n-light-2) 0px 0px 0px 1px inset;
+  border-radius: 6px;
+  padding: 8px;
+}
+.n-input--default > .n-input__input:hover {
+  box-shadow: var(--n-dark-2) 0px 0px 0px 1px inset;
+}
+.n-input--default > .n-input__input:focus {
+  box-shadow: var(--n-theme-primary) 0px 0px 0px 2px inset;
+}
+.n-input--default > .n-input__label {
+  padding-left: 8px;
+}
+.n-input--basic > .n-input__input {
+  box-shadow: var(--n-light-2) 0px 1px 0px 0px;
+  padding-block: 8px;
+  padding-inline: 2px;
+}
+.n-input--basic > .n-input__input:hover {
+  box-shadow: var(--n-dark-2) 0px 1px 0px 0px;
+}
+.n-input--basic > .n-input__input:focus {
+  box-shadow: var(--n-theme-primary) 0px 1px 0px 0px;
+}
+.n-input--basic > .n-input__label {
+  padding-left: 4px;
+}
