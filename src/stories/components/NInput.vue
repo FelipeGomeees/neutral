@@ -1,10 +1,10 @@
 <template>
-    <div class="n-input">
+    <div :class="inputClasses">
         <input 
         v-bind="$attrs"
         type="text" 
         placeholder=""
-        :class="inputClasses"
+        class="n-input__input"
         />
         <label class="n-input__label">{{ label }}</label>
         <small class="n-input__small">{{ info }}</small>
@@ -45,11 +45,11 @@ export default {
   computed: {
     inputClasses() {
       return {
-        'n-input__input': true,
-        'n-input__input--default': !this.basic,
-        'n-input__input--basic': this.basic,
-        'n-input__input--s-small': this.size === 'small',
-        'n-input__input--s-large': this.size === 'large',
+        'n-input': true,
+        'n-input--default': !this.basic,
+        'n-input--basic': this.basic,
+        'n-input--size-small': this.size === 'small',
+        'n-input--size-large': this.size === 'large',
       };
     },
   },
