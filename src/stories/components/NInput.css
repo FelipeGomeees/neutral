@@ -18,6 +18,7 @@
   transition: box-shadow var(--n-transition-time);
   caret-color: var(--n-theme-primary);
   color: var(--n-dark-2);
+  background: none;
 }
 
 .n-input__label {
